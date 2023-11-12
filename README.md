@@ -1,0 +1,1 @@
+# asterlinux-calamares-config-testing
