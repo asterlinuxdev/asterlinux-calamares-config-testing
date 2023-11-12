@@ -1,0 +1,46 @@
+### WINDOW CONFIGURATION
+
+componentName: aster
+
+welcomeStyleCalamares: false
+
+welcomeExpandingLogo: true
+
+windowExpanding: normal
+
+windowSize: 1200px,715px
+
+windowPlacement: center
+
+sidebar: widget
+
+navigation: widget
+
+strings:
+    productName:         AsterLinux
+    shortProductName:    AsterLinux
+    version:             FX1
+    shortVersion:        FX1
+    versionedName:       AsterLinux
+    bootloaderEntryName: AsterLinux
+
+images:
+    productLogo:         "asterlinux-icon.png"
+    #productIcon:         "asterlinux-icon.png"
+    productWelcome:      "aster-welcome.png"
+    #productBanner:       "release-name-logo.png"
+    #productWallpaper:    "wallpaper.png"
+
+style:
+   SidebarBackground:    "#17182B"
+   SidebarText:          "#FFFFFF"
+   SidebarTextSelect:    "#17182B"
+   SidebarTextHighlight: "#2EB398"
+
+slideshow:               "show.qml"
+
+slideshowAPI: 2
+
+uploadServer :
+    type :    "fiche"
+    url :     "http://termbin.com:9999"
