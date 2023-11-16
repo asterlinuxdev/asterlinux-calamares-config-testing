@@ -1,11 +1,20 @@
-/* === This file is part of Calamares - <https://calamares.io> ===
+/* === This file is part of Calamares - <https://github.com/calamares> ===
  *
- *   SPDX-FileCopyrightText: 2015 Teo Mrnjavac <teo@kde.org>
- *   SPDX-FileCopyrightText: 2018 Adriaan de Groot <groot@kde.org>
- *   SPDX-License-Identifier: GPL-3.0-or-later
+ *   Copyright 2015, Teo Mrnjavac <teo@kde.org>
+ *   Copyright 2018, Adriaan de Groot <groot@kde.org>
  *
- *   Calamares is Free Software: see the License-Identifier above.
+ *   Calamares is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, either version 3 of the License, or
+ *   (at your option) any later version.
  *
+ *   Calamares is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ *   GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with Calamares. If not, see <http://www.gnu.org/licenses/>.
  */
 
 import QtQuick 2.0;
@@ -22,187 +31,157 @@ Presentation
 
     Timer {
         id: advanceTimer
-        interval: 15000
-        running: presentation.activatedInCalamares
+        interval: 40000
+        running: true
         repeat: true
         onTriggered: nextSlide()
     }
 
     Slide {
 
-    anchors.fill: parent
-    anchors.verticalCenterOffset: 0
-
-    Image {
-        id: background1
-        source: "aster1.png"
-        width: parent.width; height: parent.height
-        horizontalAlignment: Image.AlignCenter
-        verticalAlignment: Image.AlignTop
-        fillMode: Image.Stretch
-        anchors.fill: parent
-    	}
+        Image {
+            id: background_2
+            source: "aster1.png"
+            width: 1002; height: 651
+            fillMode: Image.PreserveAspectFit
+            anchors.centerIn: parent
+        }
     }
+
 
     Slide {
 
-    anchors.fill: parent
-    anchors.verticalCenterOffset: 0
+        Image {
+            id: background_3
+            source: "aster2.png"
+            width: 1002; height: 651
+            fillMode: Image.PreserveAspectFit
+            anchors.centerIn: parent
+        }
+    }
 
-    Image {
-        id: background2
-        source: "aster2.png"
-        width: parent.width; height: parent.height
-        horizontalAlignment: Image.AlignCenter
-        verticalAlignment: Image.AlignTop
-        fillMode: Image.Stretch
-        anchors.fill: parent
+        Slide {
+
+        Image {
+            id: background_4
+            source: "aster3.png"
+            width: 1002; height: 651
+            fillMode: Image.PreserveAspectFit
+            anchors.centerIn: parent
         }
     }
 
     Slide {
 
-            anchors.fill: parent
-            anchors.verticalCenterOffset: 0
-
-            Image {
-                id: background2
-                source: "aster2.png"
-                width: parent.width; height: parent.height
-                horizontalAlignment: Image.AlignCenter
-                verticalAlignment: Image.AlignTop
-                fillMode: Image.Stretch
-                anchors.fill: parent
-            }
-        }
-    }
-
-    Slide {
-
-            anchors.fill: parent
-            anchors.verticalCenterOffset: 0
-
-            Image {
-                id: background3
-                source: "aster3.png"
-                width: parent.width; height: parent.height
-                horizontalAlignment: Image.AlignCenter
-                verticalAlignment: Image.AlignTop
-                fillMode: Image.Stretch
-                anchors.fill: parent
-            }
-        }
-    }
-
-    Slide {
-
-            anchors.fill: parent
-            anchors.verticalCenterOffset: 0
-
-            Image {
-                id: background4
-                source: "aster4.png"
-                width: parent.width; height: parent.height
-                horizontalAlignment: Image.AlignCenter
-                verticalAlignment: Image.AlignTop
-                fillMode: Image.Stretch
-                anchors.fill: parent
-            }
+        Image {
+            id: background_5
+            source: "aster4.png"
+            width: 1002; height: 651
+            fillMode: Image.PreserveAspectFit
+            anchors.centerIn: parent
         }
     }
     
     Slide {
 
-            anchors.fill: parent
-            anchors.verticalCenterOffset: 0
-
-            Image {
-                id: background5
-                source: "aster5.png"
-                width: parent.width; height: parent.height
-                horizontalAlignment: Image.AlignCenter
-                verticalAlignment: Image.AlignTop
-                fillMode: Image.Stretch
-                anchors.fill: parent
-            }
+        Image {
+            id: background_6
+            source: "aster5.png"
+            width: 1002; height: 651
+            fillMode: Image.PreserveAspectFit
+            anchors.centerIn: parent
         }
     }
 
-        Slide {
+    Slide {
 
-            anchors.fill: parent
-            anchors.verticalCenterOffset: 0
-
-            Image {
-                id: background6
-                source: "aster6.png"
-                width: parent.width; height: parent.height
-                horizontalAlignment: Image.AlignCenter
-                verticalAlignment: Image.AlignTop
-                fillMode: Image.Stretch
-                anchors.fill: parent
-            }
+        Image {
+            id: background_7
+            source: "aster6.png"
+            width: 1002; height: 651
+            fillMode: Image.PreserveAspectFit
+            anchors.centerIn: parent
         }
     }
 
-        Slide {
+    Slide {
 
-            anchors.fill: parent
-            anchors.verticalCenterOffset: 0
-
-            Image {
-                id: background7
-                source: "aster7.png"
-                width: parent.width; height: parent.height
-                horizontalAlignment: Image.AlignCenter
-                verticalAlignment: Image.AlignTop
-                fillMode: Image.Stretch
-                anchors.fill: parent
-            }
+        Image {
+            id: background_8
+            source: "aster7.png"
+            width: 1002; height: 651
+            fillMode: Image.PreserveAspectFit
+            anchors.centerIn: parent
         }
     }
 
-        Slide {
+    Slide {
 
-            anchors.fill: parent
-            anchors.verticalCenterOffset: 0
-
-            Image {
-                id: background8
-                source: "aster8.png"
-                width: parent.width; height: parent.height
-                horizontalAlignment: Image.AlignCenter
-                verticalAlignment: Image.AlignTop
-                fillMode: Image.Stretch
-                anchors.fill: parent
-            }
+        Image {
+            id: background_9
+            source: "aster8.png"
+            width: 1002; height: 651
+            fillMode: Image.PreserveAspectFit
+            anchors.centerIn: parent
         }
     }
 
-        Slide {
+    Slide {
 
-            anchors.fill: parent
-            anchors.verticalCenterOffset: 0
-
-            Image {
-                id: background9
-                source: "aster9.png"
-                width: parent.width; height: parent.height
-                horizontalAlignment: Image.AlignCenter
-                verticalAlignment: Image.AlignTop
-                fillMode: Image.Stretch
-                anchors.fill: parent
-            }
+        Image {
+            id: background_10
+            source: "aster9.png"
+            width: 1002; height: 651
+            fillMode: Image.PreserveAspectFit
+            anchors.centerIn: parent
         }
     }
 
+    Slide {
+
+        Image {
+            id: background_11
+            source: "aster1.png"
+            width: 1002; height: 651
+            fillMode: Image.PreserveAspectFit
+            anchors.centerIn: parent
+        }
+    }
+
+    Slide {
+
+        Image {
+            id: background_12
+            source: "aster2.png"
+            width: 1002; height: 651
+            fillMode: Image.PreserveAspectFit
+            anchors.centerIn: parent
+        }
+    }
+    
+    Slide {
+
+        Image {
+            id: background_13
+            source: "aster3.png"
+            width: 1002; height: 651
+            fillMode: Image.PreserveAspectFit
+            anchors.centerIn: parent
+        }
+    }
+
+    // When this slideshow is loaded as a V1 slideshow, only
+    // activatedInCalamares is set, which starts the timer (see above).
+    //
+    // In V2, also the onActivate() and onLeave() methods are called.
+    // These example functions log a message (and re-start the slides
+    // from the first).
     function onActivate() {
         console.log("QML Component (default slideshow) activated");
         presentation.currentSlide = 0;
     }
-
+    
     function onLeave() {
         console.log("QML Component (default slideshow) deactivated");
     }
-
 }

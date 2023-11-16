@@ -26,7 +26,7 @@ _pkg_msg() {            # use this to provide all package management messages (i
 }
 
 _check_internet_connection(){
-    eos-connection-checker
+    aster-connection-checker
 }
 
 _is_pkg_installed() {  # this is not meant for offline mode !?
@@ -57,7 +57,7 @@ _remove_pkgs_if_installed() {  # this is not meant for offline mode !?
 }
 
 _install_needed_packages() {
-    if eos-connection-checker ; then
+    if aster-connection-checker ; then
         _pkg_msg install "if missing: $*"
         pacman -S --needed --noconfirm "$@"
     else
@@ -427,7 +427,7 @@ _clean_up(){
     _misc_cleanups
 
     # on the target, select file server based on country
-    xx=/usr/bin/eos-select-file-server
+    xx=/usr/bin/aster-select-file-server
     if [ -x $xx ] ; then
         _c_c_s_msg info "running $xx"
         local fileserver="$($xx)"
@@ -465,7 +465,7 @@ _run_hotfix_end() {
         _c_c_s_msg $type "cannot fetch $file, no connection."
         return
     fi
-    local url=$(eos-github2gitlab https://raw.githubusercontent.com/enddddeavouros-team/ISO-hotfixes/main/$file)
+    local url=$(eos-github2gitlab https://raw.githubusercontent.com/asterlinuxdev/ISO-hotfixes/main/$file)
     wget --timeout=60 -q -O /tmp/$file $url && {
         _c_c_s_msg info "running script $file"
         bash /tmp/$file
@@ -512,7 +512,7 @@ Main() {
     rm -rf /etc/calamares /opt/extra-drivers
 
     # Remove device-info & eos-connection-checker if they aren't installed
-    [[ $(pacman -Q eos-bash-shared  2</dev/null) ]] || rm /bin/device-info /bin/eos-connection-checker
+    [[ $(pacman -Q aster-bash-shared  2</dev/null) ]] || rm /bin/aster-connection-checker
 
     _c_c_s_msg info "$filename done."
 }
